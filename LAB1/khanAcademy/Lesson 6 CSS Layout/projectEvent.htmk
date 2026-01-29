@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project: Event invite</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                background-color: pink;
+                text-align: center;
+                color: #333;
+            }
+            .invite-card {
+                background-color: white;
+                width: 400px;
+                margin: 20px auto;
+                padding: 20px;
+                border: 2px solid #2e8b57;
+            }
+            h1 {
+                color: #2e8b57;
+            }
+            .details {
+                font-weight: bold;
+                color: gray;
+            }
+            table {
+                margin: 10px auto;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid #ccc;
+                padding: 8px;
+            }
+            
+            #italy
+            {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="invite-card">
+            <h1>You're invited!</h1>
+            <h2>To Ramazan's birthday!</h2>
+            
+            <p class="details">The details:</p>
+            <ul>
+                <li><strong>Date:</strong> Saturday, Oct 28th</li>
+                <li><strong>Time:</strong> 6:00 PM</li>
+                <li id = 'italy'><strong>Location:</strong> Capri, Italy</li>
+            </ul>
+
+            <h3>Guest List</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Bringing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Meow</td>
+                        <td>Juice boxes</td>
+                    </tr>
+                    <tr>
+                        <td>Schumacher</td>
+                        <td>Ferrari</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><em>good mood required :3 </em></p>
+        </div>
+        
+    </body>
+</html>
