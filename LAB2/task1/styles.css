@@ -1,16 +1,4 @@
-<!DOCTYPE HTML>
-
-<html>
-    <head> 
-        <meta charset= "utf-8">
-        <style>
-    /* .container
-    {
-        justify-content: flex-start; 
-        margin: 100px;   
-    } */
-    
-    body
+body
     {
         background-color: rgb(242, 244, 247);
     }
@@ -146,35 +134,3 @@
         font-weight: bold;
         text-decoration: none;
     }
-        </style>
-    </head>
-
-    <body>
-
-        <img class="logo" src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="Facebook">
-        <div class="text">
-            Facebook помогает вам всегда <br> 
-            оставаться на связи и общаться со <br> 
-            своими знакомыми.
-        </div>
-
-        <div class="login-box">
-        <input type="text" placeholder="Электронный адрес или номер телефона">
-        <input type="password" placeholder="Пароль">
-        <button id = "butt">Вход</button>
-            <div class="links">
-            <a href="#">Забыли пароль?</a> <br>
-            </div>
-        
-        <div class="divider"></div>
-
-            <div class="signup-box">
-            <a href="#">Создать новый аккаунт</a>
-            </div>
-        </div>
-
-        <p class = 'down'> <a href="https://www.facebook.com/pages/create/?ref_type=registration_form"> Создать Страницу </a> знаменитости, музыкальной группы или <br> компании.</p>
-
-    </body>
-
-</html>
