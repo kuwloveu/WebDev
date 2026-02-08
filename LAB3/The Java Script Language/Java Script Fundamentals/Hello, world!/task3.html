@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="file.js">
+    alert(1); // the content is ignored, because src is set
+    </script>
+
+    <script src="file.js"></script>
+    <script>
+    alert(1); // this one will work
+    </script>
+</head>
+<body>
+
+</body>
+</html>
