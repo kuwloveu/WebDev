@@ -1,0 +1,111 @@
+import { Product } from './product.model';
+
+export const PRODUCTS: Product[] = [
+  {
+    id: 1,
+    name: 'Смартфон Apple iPhone 17 Pro 256Gb оранжевый',
+    description: 'Apple iPhone 17 Pro 256Gb — это воплощение инноваций и стиля, сочетающее в себе непревзойденную производительность, потрясающую камеру и яркий OLED-дисплей.',
+    price: 780_030,
+    rating: 5,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/p18/p96/64168413.png?format=gallery-medium',
+    images: [],
+    link: 'https://kaspi.kz/shop/p/apple-iphone-17-pro-256gb-oranzhevyi-145467625/?c=750000000',
+  },
+  {
+    id: 2,
+    name: 'Смарт-часы Garmin MARQ Adventurer Gen 2 Damascus Steel 47 мм серебристый-коричневый',
+    description: 'Представляем умные часы Garmin MARQ Adventurer Gen 2 — идеальный спутник для активных людей, которые ценят стиль и функциональность. Эти часы не только выглядят впечатляюще, но и предлагают множество возможностей для отслеживания вашей активности и здоровья',
+    price: 1_839_990,
+    rating: 5,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/pd1/pee/7901121.PNG?format=gallery-medium',
+    images: [],
+    link: 'https://kaspi.kz/shop/p/garmin-marq-adventurer-gen-2-damascus-steel-47-mm-serebristyi-korichnevyi-129923873/?c=750000000',
+  },
+  {
+    id: 3,
+    name: 'Наушники Bang & Olufsen BeoPlay H100 оранжевый',
+    description: 'Беспроводные наушники с качественным звуком и долгим временем работы.',
+    price: 1_124_000,
+    rating: 4.7,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/h4a/hc6/87138273624094.jpg?format=gallery-medium',
+    images: [],
+    link: 'https://kaspi.kz/shop/p/naushniki-bang-olufsen-beoplay-h100-oranzhevyi-123639332/?c=750000000',
+  },
+
+  {
+    id: 4,
+    name: 'Ноутбук Apple MacBook Pro 16 2024 16.2" / 48 Гб / SSD 1000 Гб / macOS / MX2W3RU/A',
+    description: '— мощный ноутбук, который сочетает в себе высокую производительность,изысканный дизайн',
+    price: 2_600_000,
+    rating: 4.9,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/p5e/p1c/18087106.png?format=gallery-medium',
+    images: [],
+    link: 'https://kaspi.kz/shop/p/apple-macbook-pro-16-2024-16-2-48-gb-ssd-1000-gb-macos-mx2w3ru-a-132850417/?c=750000000',
+  },
+
+  {
+    id: 5,
+    name: 'Камера Sony ILME FX30.CEC',
+    description: 'Видеокамера Sony ILME FX30.CEC — профессиональный инструмент для создания высококачественного видео, который сочетает в себе инновационные технологии и компактный дизайн.',
+    price: 985_152,
+    rating: 5,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/h09/h83/80092586410014.jpg?format=gallery-medium',
+    images: [],
+    link: 'https://kaspi.kz/shop/p/sony-ilme-fx30-cec-109890277/?c=750000000',
+  },
+
+  {
+    id: 6,
+    name: 'Клавиатура AULA F75 белый',
+    description: 'Клавиатура AULA F75 — стильная механическая клавиатура с компактным форм-фактором 75%. Подсветка RGB, съёмный кабель Type-C и надёжные переключатели обеспечивают комфорт при игре и работе. Подходит для ПК и ноутбуков. Идеальный выбор для геймеров и ценителей эстетики.',
+    price: 21_497,
+    rating: 5,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/h8d/h9f/85519448506398.png?format=gallery-medium',
+    images: [],
+    link: 'https://kaspi.kz/shop/p/aula-f75-belyi-117731409/?c=750000000',
+  },
+
+  {
+    id: 7,
+    name: 'Оперативная память Kingston Fury Beast KF432C16BBK2/16 16 Гб',
+    description: 'Компания Kingston с гордостью представляет Kingston FURY — бренд высокопроизводительных продуктов для геймеров и энтузиастов. Опыт Kingston в разработке и производстве памяти и хранилищ файлов (воплощением которого стали продукты HyperX DRAM, флэш-память и твердотельные накопители) помогает компании в течение двух десятилетий оставаться ключевым выбором энтузиастов и геймеров. ',
+    price: 89_899,
+    rating: 5,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/ha9/h27/64163639001118.jpg?format=gallery-medium',
+    images: [],
+    link: 'https://kaspi.kz/shop/p/kingston-fury-beast-kf432c16bbk2-16-16-gb-101900315/?c=750000000',
+  },
+
+  {
+    id: 8,
+    name: 'Караоке-система AST OneBox черный',
+    description: 'Караоке-система AST OneBox — идеальный выбор для домашних вечеринок и семейных праздников, предлагающая высокое качество звука, удобное управление и широкий выбор песен.',
+    price: 750_000,
+    rating: 5,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/h79/hdc/63918724349982.jpg?format=gallery-medium',
+    images: [],
+    link: 'https://kaspi.kz/shop/p/ast-onebox-chernyi-101018259/?c=750000000',
+  },
+
+  {
+    id: 9,
+    name: 'Портативная колонка Harman Kardon Go+Play 3 черный',
+    description: 'Портативная колонка Harman Kardon Go+Play 3 — высококачественное звучание и стильный дизайн в одном устройстве, идеально подходящем для любых мероприятий и путешествий.',
+    price: 228_030,
+    rating: 5,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/hb9/h9a/84558339276830.jpg?format=gallery-medium',
+    images: [],
+    link: 'https://kaspi.kz/shop/p/portativnaja-kolonka-harman-kardon-go-play-3-chernyi-114791754/?c=750000000',
+  },
+
+  {
+    id: 10,
+    name: 'Видеокарта Palit RTX 5060 Ti INFINITY 3 16GB (NE7506T019T1-GB2061S) 16 Гб',
+    description: 'Погрузитесь в мир высоких технологий с Palit RTX 5060 Ti INFINITY 3 16GB — видеокартой, которая обеспечит вам невероятную производительность и высокое качество графики для игр и профессиональных приложений.',
+    price: 339_972,
+    rating: 5,
+    image: 'https://resources.cdn-kaspi.kz/img/m/p/pf2/p0b/37066117.jpg?format=gallery-large',
+    images: [],
+    link: 'https://kaspi.kz/shop/p/palit-rtx-5060-ti-infinity-3-16gb-ne7506t019t1-gb2061s-16-gb-138216471/?c=750000000',
+  },
+];
