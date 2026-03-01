@@ -1,0 +1,13 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 35px 60px;
+  padding: 25px 115px;
+}
+
+.empty-message {
+  text-align: center;
+  color: #888;
+  font-size: 18px;
+  margin-top: 60px;
+}

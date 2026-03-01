@@ -1,0 +1,181 @@
+.card {
+  width: 190px;
+  height: 445px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 25px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+}
+
+.card:hover {
+  transform: scale(1.017);
+}
+
+
+.card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.image-wrapper {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+.image-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.image-controls button {
+  min-width: 50px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 6px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease, 0.2s ease;
+}
+
+.image-controls button:hover {
+  background: white;
+  transform: scale(1.25);
+}
+
+
+.divider {
+  height: 1px;
+  background: #ddd;
+  margin: 8px 0;
+}
+
+
+.name {
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
+  margin: 0 0 4px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.description {
+  font-size: 13px;
+  font-family: Roboto, sans-serif;
+  color: #555;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  font-family: Roboto, sans-serif;
+  margin-top: 6px;
+}
+
+.rating {
+  font-size: 14px;
+  margin: 4px 0 0;
+}
+
+
+.card-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.kaspi-button,
+.share-button {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  background: #0088cc;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s ease, transform 0.2s ease;
+}
+
+.kaspi-button:hover,
+.share-button:hover {
+  background: #0078b6;
+  transform: scale(1.02);
+}
+
+
+.bottom-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.like-button {
+  flex: 1;
+  padding: 7px;
+  border: none;
+  background: #fff0f0;
+  color: #e53935;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s ease, transform 0.2s ease;
+}
+
+.like-button:hover {
+  background: #ffd6d6;
+  transform: scale(1.04);
+}
+
+.delete-button {
+  flex: 1;
+  padding: 7px;
+  border: none;
+  background: #f5f5f5;
+  color: #555;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s ease, transform 0.2s ease;
+}
+
+.delete-button:hover {
+  background: #ffebee;
+  color: #c62828;
+  transform: scale(1.04);
+}
