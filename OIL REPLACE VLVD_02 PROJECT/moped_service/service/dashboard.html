@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moped Service — Дашборд</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0f2f5; color: #333; }
+
+        .header {
+            background: #1a1a2e;
+            color: white;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 { font-size: 20px; font-weight: 600; }
+        .header a { color: #aaa; text-decoration: none; font-size: 14px; }
+        .header a:hover { color: white; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
+
+        .section-title {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #888;
+            letter-spacing: 1px;
+            margin: 24px 0 12px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+        .card .label { font-size: 13px; color: #888; margin-bottom: 8px; }
+        .card .value { font-size: 26px; font-weight: 700; color: #1a1a2e; }
+        .card .sub { font-size: 12px; color: #aaa; margin-top: 4px; }
+        .card.green .value { color: #16a34a; }
+        .card.blue .value { color: #2563eb; }
+        .card.orange .value { color: #ea580c; }
+
+        .table-wrap {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+            overflow-x: auto;
+        }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        th { text-align: left; padding: 8px 12px; color: #888; font-weight: 600; border-bottom: 2px solid #f0f2f5; }
+        td { padding: 10px 12px; border-bottom: 1px solid #f0f2f5; }
+        tr:last-child td { border-bottom: none; }
+        .profit { color: #16a34a; font-weight: 600; }
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .badge.yes { background: #dcfce7; color: #16a34a; }
+        .badge.no  { background: #f3f4f6; color: #888; }
+
+        @media (max-width: 600px) {
+            .value { font-size: 20px !important; }
+            th, td { padding: 8px 6px; font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>🛵 Moped Service</h1>
+    <a href="/admin/">→ Админ-панель</a>
+</div>
+
+<div class="container">
+
+    <div class="section-title">Этот месяц</div>
+    <div class="cards">
+        <div class="card green">
+            <div class="label">Прибыль за месяц</div>
+            <div class="value">{{ month_profit }} ₸</div>
+            <div class="sub">Выручка: {{ month_revenue }} ₸</div>
+        </div>
+        <div class="card blue">
+            <div class="label">Замен масла</div>
+            <div class="value">{{ month_changes }}</div>
+            <div class="sub">Фильтров заменено: {{ month_filters }}</div>
+        </div>
+        <div class="card orange">
+            <div class="label">Масла продано</div>
+            <div class="value">{{ month_oil }} л</div>
+        </div>
+    </div>
+
+    <div class="section-title">За всё время</div>
+    <div class="cards">
+        <div class="card green">
+            <div class="label">Общая прибыль</div>
+            <div class="value">{{ total_profit }} ₸</div>
+            <div class="sub">Выручка: {{ total_revenue }} ₸</div>
+        </div>
+        <div class="card blue">
+            <div class="label">Всего замен</div>
+            <div class="value">{{ total_changes }}</div>
+            <div class="sub">Клиентов: {{ total_clients }}</div>
+        </div>
+        <div class="card orange">
+            <div class="label">Масла всего</div>
+            <div class="value">{{ total_oil }} л</div>
+            <div class="sub">Фильтров: {{ total_filters }}</div>
+        </div>
+    </div>
+
+    <div class="section-title">Последние замены</div>
+    <div class="table-wrap">
+        {% if recent_changes %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Дата</th>
+                    <th>Клиент</th>
+                    <th>Масло</th>
+                    <th>Объём</th>
+                    <th>Фильтр</th>
+                    <th>Цена</th>
+                    <th>Прибыль</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for c in recent_changes %}
+                <tr>
+                    <td>{{ c.date }}</td>
+                    <td>{{ c.client.owner_name }}</td>
+                    <td>{{ c.oil_type }}</td>
+                    <td>{{ c.oil_volume }} л</td>
+                    <td>
+                        {% if c.filter_replaced %}
+                            <span class="badge yes">✓ Да</span>
+                        {% else %}
+                            <span class="badge no">Нет</span>
+                        {% endif %}
+                    </td>
+                    <td>{{ c.price_charged }} ₸</td>
+                    <td class="profit">{{ c.profit }} ₸</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p style="color:#aaa; padding: 8px;">Замен пока нет.</p>
+        {% endif %}
+    </div>
+
+    <div class="section-title">Последние продажи масла</div>
+    <div class="table-wrap">
+        {% if recent_sales %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Дата</th>
+                    <th>Клиент</th>
+                    <th>Масло</th>
+                    <th>Объём</th>
+                    <th>Цена</th>
+                    <th>Прибыль</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for s in recent_sales %}
+                <tr>
+                    <td>{{ s.date }}</td>
+                    <td>{{ s.client.owner_name|default:"—" }}</td>
+                    <td>{{ s.oil_type }}</td>
+                    <td>{{ s.oil_volume }} л</td>
+                    <td>{{ s.price_charged }} ₸</td>
+                    <td class="profit">{{ s.profit }} ₸</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p style="color:#aaa; padding: 8px;">Продаж пока нет.</p>
+        {% endif %}
+    </div>
+
+</div>
+</body>
+</html>
