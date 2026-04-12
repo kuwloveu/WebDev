@@ -1,4 +1,4 @@
-from api.views.mixins import (
+from api.views.generics import (
     ProductListAPIView,
     ProductDetailAPIView,
     CategoryListAPIView,
